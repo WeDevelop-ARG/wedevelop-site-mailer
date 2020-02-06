@@ -10,6 +10,8 @@ hooks:
   BeforeInstall:
     - location: ./codedeploy-scripts/cleanup-destination-dir.sh
   AfterInstall:
+    - location: ./codedeploy-scripts/set-permissions.sh
+      runas: root
     - location: ./codedeploy-scripts/install-dependencies.sh
       runas: ubuntu
   ApplicationStop:
