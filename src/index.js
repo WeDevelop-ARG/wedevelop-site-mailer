@@ -13,7 +13,7 @@ app.post('/send', async (req, res) => {
   try {
     axios.post('https://api.sendgrid.com/v3/mail/send', req.body, {
       headers: {
-        Authorization: `Bearer ${process.env.VUE_APP_SENDGRID_API_KEY}`
+        Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`
       }
     })
   } catch (err) {
