@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+artifacts:
+  files:
+    - 'codedeploy-scripts/**/*'
+    - 'dist/**/*'
+    - 'src/**/*'
+    - 'appspec.yml'
+    - 'buildspec.yml'
+    - 'package.json'
